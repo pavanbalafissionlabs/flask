@@ -1,0 +1,30 @@
+{% extends 'layout.html' %} {%block content%}
+<h2>click on image</h2>
+<ul>
+  {% for i in data %}
+  <a href="{{url_for('dish')}}">
+    <div style="float: left; margin-top: 2%; width: 30%">
+      <div style="width: 100%; height: 200px">
+        <img
+          src="static/images/{{i.image_file}}"
+          alt=""
+          width="100%"
+          height="200px"
+        />
+      </div>
+      <div>
+        Resturant:
+        <h1>{{i.name}}</h1>
+
+        rating:
+        <h2>{{i.rating}}</h2>
+        Price:
+        <p>{{i.place}}</p>
+        Timings:
+        <p>{{i.timings}}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</ul>
+{%endblock content%}

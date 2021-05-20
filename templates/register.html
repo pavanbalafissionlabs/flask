@@ -1,0 +1,55 @@
+{% extends 'layout.html' %} {%block content%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        margin: auto;
+        width: 60%;
+        border: 3px solid #73ad21;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <form action=" {{url_for('register')}}" method="POST">
+        <label for="name">name</label><br />
+        <input type="text" name="name" size="15" />
+        <br />
+        <!-- <label for="Year">Year of studying:</label><br />
+        <select id="Year" name="year">
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+        </select>
+        <br />
+        <label for="yearoftenth">Year of completed 10:</label><br />
+        <select id="Yearoftenth" name="yearoftenth">
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+        </select>
+        <br />
+        <label for="HTNO">HallTicket No</label><br />
+        <input name="HTNO" size="15" />
+        <br />
+        <label for="birthday">Birthday:</label><br />
+        <input type="date" id="birthday" name="birthday" /> -->
+        <br />
+        <label for="email">Email</label><br />
+        <input type="email" name="email" size="15" />
+        <br />
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+{%endblock content %}

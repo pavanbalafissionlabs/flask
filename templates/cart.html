@@ -1,0 +1,30 @@
+{% extends 'layout.html' %} {%block content%}
+<h2>items you added into </h2>
+<ul>
+  {% for i in data %}
+  <a href="">
+    <div style="float: left; margin-top: 2%; width: 30%">
+      <div style="width: 100%; height: 200px">
+        <img
+          src="static/images/{{i.image_file}}"
+          alt=""
+          width="100%"
+          height="200px"
+        />
+      </div>
+      <div>
+        <h1>{{i.dishname}}</h1>
+
+        <h2>{{i.rating}}</h2>
+        <p>{{i.price}}</p>
+        <p>{{i.timings}}</p>
+        <p>{{i.description}}</p>
+      </div>
+     </a>
+     <form action="{{url_for('buy')}}">
+          <input type="submit" value="Buy" />
+        </form>
+    </div>
+  {% endfor %}
+</ul>
+{%endblock content%}
